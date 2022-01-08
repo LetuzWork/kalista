@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+body {
+    background: #111116;
+    color: #eee;
+    font-family: 'Open Sans', serif;
+}
+a{
+    all: unset;
+}
+.highlight:hover{
+    color: goldenrod;
+}
+/* -----------Header------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 6em;
+    /* background-image: url("imgs/bannerHD.jpg"); */
+    background-size: cover;
+    padding: 12px 2px;
+    margin: -8px;
+    z-index: -1;
+}
+
+.logo {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    margin-left: 5px;
+    color: white
+}
+
+
+/* NAV */
+
+nav {
+    background: white;
+    color: #333;
+    padding: 14px;
+    padding-bottom: 10px;
+    margin-top: -8px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+nav * {
+    margin: 0 6px;
+    color: #333;
+}
+/* Footer */
+
+.media-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+/* -------------App--------------- */
+
+#body {
+    border-radius: 20px;
+    /* background: #fff; */
+    padding: 20px;
+    margin: -6px;    
+}
+
+
+
+
+/* ------------------------------ */
+#search_view{
+    position:fixed;
+    right:0; top:0;
+    width: 100%;
+    padding: 6% 0;
+    background: #fff;
+    color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 30px 0 30px;
+    max-width: 500px;
+    animation: 500ms slideInFromRight;
+}
+@keyframes slideInFromRight {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(0);}
+}
+#search_view input{
+    all: unset;
+    width: 80%;
+    height: 80%;
+}
+/* ----------Menu_view----------- */
+#menu_view{
+    position:fixed;
+    left:0; top:0;
+    width: 95%;
+    height: 97.5%;
+    padding: 5%;
+    /* margin: -6px; */
+    background: #111116;
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    color: #eee;
+    z-index: 30;
+    transition: all 1s;
+    animation: 1s slideInFromLeft;
+}
+@keyframes slideInFromLeft {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+#menu_view *{
+    text-transform: capitalize;
+}
+
+.close{
+    align-self: flex-end;
+    text-transform: lowercase !important;
+    margin-right: 20px;
+}
+#menu_view footer{
+    margin-top: 25vh;
+}
+    #user-acount-buttons{margin-top: 60px;}
+    #user-acount-buttons *{
+        font-size: 20px;
+        margin: 20px;
+        margin-top: 120px;
+    }
+/* ------------------------------ */
+/* ---------Product-Card----------- */
+.product-card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: 2px 2px 6px 3px #080808;
+    padding:15px;
+    margin: 10px; 
+    background: #111115;
+    border-radius: 30px 4px 30px 4px;
+    max-width: 300px;
+}
+.product-card img{
+    width: 60%;
+    border-radius: 4px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+.product-id{
+    font-weight:bold;
+
+} 
+.product-price{
+    font-size: 0.75em;
+    color:#888;
+}
+.cart-button{
+    position: absolute;
+    bottom: 60px;
+    left: 65%;
+    background: #456;
+    color: #ccc;
+    border-radius: 30px 4px 30px 4px;
+    padding: 5px 15px;
+}
+.on-cart{
+    color:chartreuse;
+}
+/* ------------------------------ */
+/* -------Group-card------------ */
+#main{
+    display: flex;
+    flex-wrap:wrap; 
+    flex-direction: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width:100%;
+    z-index: 2;
+    height: 100px;
+}
+
+.group-card{
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin-right: 5%;
+}
+.group-card img{
+    filter: opacity(0.95);
+    width: 100%;
+    border-radius: 20px;
+    /* animation: 5s slideInFromLeft; */
+}
+.group-card h2{
+    position: absolute;
+    top: 10px;left: 10px;
+    z-index:2 ;
+    color: #fff;
+    text-shadow: 0 0 10px black;
+    text-transform: capitalize;
+}
+
+/* ------------------------------ */
+
+/* ---------Login/Register---------- */
+
+.auth-card{
+    display:flex;
+    flex-direction: column;
+    background: #eee;
+    padding: 20px;
+    color: #111;
+    border-radius: 5px;
+}
+.auth-card form{
+    display:flex;
+    flex-direction: column;
+
+}
+.auth-card input{
+    all: unset;
+    border-bottom:1px solid gray;
+    margin: 20px 0;
+}
+.auth-card form * {
+    margin: 15px 0;
+}
+.auth-card h2{
+    text-shadow:2px 2px 2px #ccc;
+}
+.auth-card button, .formated-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #aaaa;
+}
+
+/* ------------------------------ */
+/* --------Cart view----------- */
+#cart_view{
+    background: #111116;
+    color: #eee;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding: 4%;
+    z-index: 5;
+    overflow: auto;
+}
+.cart-card{
+    /* width: 80%; */
+    height: 20vh;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px #08080a;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    border-radius: 3px;
+
+    background: #14141a;
+}
+.cart-card img{
+    height: 120px;
+    width: 120px;
+}
+.cart-card .data-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.data-cont .cart-acum{
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 60px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-card .take-off-cart{
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+.buy-flap{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.buy-flap *{
+    margin: 15px;
+}
+/* --------User-Page----------- */
+#userdata-switcher{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+#userdata-switcher *{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #ccc;
+    color: #666;
+    font-weight: 600;
+}
+#userdata-switcher .active{
+    background: #37f;
+    color: #eee;
+}
+/* ------------------------------ */
+/* --------User-data----------- */
+#user-data span{
+    margin-bottom: 15px;
+    border-bottom: #666;
+}
+/* ------------Purchase--------------- */
+#nopurchase-msg { text-align: center;}
+#nopurchase-msg h3{
+    color: #666;
+    font-size: 0.9em;
+}
+#nopurchase-msg button{transform: scale(0.85)}
+/* ------------------------------ */
